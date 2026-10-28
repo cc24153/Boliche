@@ -1,0 +1,49 @@
+# =========================================================================
+# Unity - Arquivos temporarios e gerados pelo editor
+# =========================================================================
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Pacotes baixados localmente da Asset Store
+/[Aa]ssets/AssetStoreTools*
+
+# Arquivos de projeto gerados por IDEs (Visual Studio, VS Code, Rider)
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Relatorios de erro do Unity
+sysinfo.txt
+
+# Compilacoes finais (Builds)
+*.apk
+*.aab
+*.unitypackage
+
+# Arquivos do sistema operacional e da IDE
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+.vs/
+.idea/
+.vscode/
