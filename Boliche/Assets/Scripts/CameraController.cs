@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -24,12 +25,15 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         // Roda a câmara enquanto manténs o botão direito do rato pressionado
-        if (Input.GetMouseButton(1)) 
+        Mouse mouse = Mouse.current;
+        if (mouse != null && mouse.rightButton.isPressed)
         {
             Cursor.lockState = CursorLockMode.Confined;
 
-            currentX += Input.GetAxis("Mouse X") * sensitivity;
-            currentY -= Input.GetAxis("Mouse Y") * sensitivity;
+            Vector2 delta = mouse.delta.ReadValue();
+            const float degreesPerPixel = 0.1f;
+            currentX += delta.x * sensitivity * degreesPerPixel;
+            currentY -= delta.y * sensitivity * degreesPerPixel;
 
             currentY = Mathf.Clamp(currentY, minYAngle, maxYAngle);
         }
